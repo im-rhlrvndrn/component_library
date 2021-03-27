@@ -1,0 +1,11 @@
+.docs {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+
+    .component {
+        flex: 1;
+        height: 100vh;
+    }
+}

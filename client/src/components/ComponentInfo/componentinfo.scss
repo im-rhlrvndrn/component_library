@@ -1,0 +1,12 @@
+@import '../../mixins.scss';
+
+.component_info {
+    width: 100%;
+    padding: 2rem 4rem;
+    height: 100vh;
+    overflow-y: auto;
+
+    h1 {
+        margin-bottom: 2rem;
+    }
+}

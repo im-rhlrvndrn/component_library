@@ -1,0 +1,128 @@
+@import './mixins.scss';
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: 'Montserrat', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 600;
+}
+
+button,
+input {
+    border: none;
+    height: 50px;
+    outline: none;
+}
+
+button {
+    cursor: pointer;
+}
+
+.navigation {
+    height: 100vh;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    overflow-y: auto;
+    background-color: #111;
+    padding: 3rem 3rem 3rem 0;
+}
+
+.navigation > a {
+    color: var(--light);
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    height: max-content;
+    text-transform: capitalize;
+    transition: 0.4s all ease-in-out;
+}
+
+.navigation > a:hover {
+    background-color: var(--dark);
+}
+
+.docs {
+    flex: 1;
+    max-height: 100vh;
+    overflow-y: auto;
+}
+
+.component_section {
+    height: max-content;
+    border-top: 4px solid var(--darkest);
+    padding: 4rem 2rem 2rem 2rem;
+}
+
+.section_separator {
+    height: max-content;
+    margin-bottom: 4rem;
+}
+
+.section_separator > p {
+    line-height: 2.5rem;
+}
+
+pre {
+    margin: 1rem 0;
+    position: relative;
+    width: max-content;
+    background: #333;
+    padding: 2rem;
+    border-radius: 10px;
+    color: #eee;
+}
+
+pre > span {
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+pre > span > svg {
+    fill: #eee;
+}
+
+h1 {
+    margin-bottom: 3rem;
+}
+
+h2 {
+    margin-top: 1rem;
+}
+
+.code-inline {
+    padding: 0.5rem 1rem;
+    margin: 0.2rem;
+    background-color: var(--darkest);
+    border-radius: var(--br-5);
+    font-size: 0.8rem;
+}
+
+.code {
+    border: none;
+    padding: 2rem;
+    min-width: 50%;
+    width: 100%;
+    height: auto;
+    max-height: 600px;
+    margin: 1rem 0;
+    color: var(--light);
+    font-size: var(--font-md);
+    border-radius: var(--br-5);
+    background-color: var(--darkest);
+}
