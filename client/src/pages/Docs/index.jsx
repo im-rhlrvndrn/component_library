@@ -5,14 +5,16 @@ import { useParams } from 'react-router';
 import './docs.scss';
 
 // React components
+import { Nav } from '../../components/Nav';
 import { Card } from '../../components/Card';
+import { List } from '../../components/List';
 import { Badge } from '../../components/Badge';
 import { Alert } from '../../components/Alert';
 import { Input } from '../../components/Input';
-import { List } from '../../components/List';
 import { Avatar } from '../../components/Avatar';
 import { Button } from '../../components/Button';
 import { DocsNav } from '../../components/DocsNav';
+import { Accordion } from '../../components/Accordion';
 
 export const Docs = () => {
     let Modal;
@@ -45,6 +47,11 @@ export const Docs = () => {
             component: Card,
         },
         {
+            displayText: 'accordions',
+            url: '/docs/accordion',
+            component: Accordion,
+        },
+        {
             displayText: 'inputs',
             url: '/docs/input',
             component: Input,
@@ -58,6 +65,11 @@ export const Docs = () => {
             displayText: 'modals',
             url: '/docs/modal',
             component: Modal,
+        },
+        {
+            displayText: 'navs',
+            url: '/docs/nav',
+            component: Nav,
         },
     ];
 
