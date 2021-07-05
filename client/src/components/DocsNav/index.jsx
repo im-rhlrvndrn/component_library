@@ -7,7 +7,7 @@ export const DocsNav = ({ navigation }) => {
     return (
         <nav>
             {navigation.map(({ url, displayText }) => (
-                <NavLink to={url}>{displayText}</NavLink>
+                <NavLink to={url}>{displayText.split('-').join(' ')}</NavLink>
             ))}
         </nav>
     );

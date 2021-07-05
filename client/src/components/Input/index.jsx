@@ -1,12 +1,12 @@
 import { ComponentInfo } from '../ComponentInfo';
-import { EnhancedComponentDetails } from '../ComponentInfo/ComponentDetails';
+import { EnhancedComponentDetails as ComponentDetails } from '../ComponentInfo/ComponentDetails';
 
 export const Input = () => {
     return (
         <ComponentInfo heading='Inputs'>
-            <EnhancedComponentDetails subHeading='primary input'>
+            <ComponentDetails subHeading='primary input'>
                 <div className='details_content_preview'>
-                    <input type='text' class='input-primary' placeholder='Primary input' />
+                    <input type='text' className='input-primary' placeholder='Primary input' />
                 </div>
                 <div className='details_content_code'>
                     <iframe
@@ -14,11 +14,15 @@ export const Input = () => {
                         sandbox='allow-scripts allow-same-origin'
                     ></iframe>
                 </div>
-            </EnhancedComponentDetails>
+            </ComponentDetails>
 
-            <EnhancedComponentDetails subHeading='transparent input'>
+            <ComponentDetails subHeading='transparent input'>
                 <div className='details_content_preview'>
-                    <input type='text' class='input-transparent' placeholder='Transparent input' />
+                    <input
+                        type='text'
+                        className='input-transparent text-black'
+                        placeholder='Transparent input'
+                    />
                 </div>
                 <div className='details_content_code'>
                     <iframe
@@ -26,20 +30,20 @@ export const Input = () => {
                         sandbox='allow-scripts allow-same-origin'
                     ></iframe>
                 </div>
-            </EnhancedComponentDetails>
+            </ComponentDetails>
 
-            <EnhancedComponentDetails subHeading='select input'>
+            {/* <EnhancedComponentDetails subHeading='select input'>
                 <div className='details_content_preview'>
-                    <div class='input-select'>
+                    <div className='input-select'>
                         <input type='text' value='None' />
-                        <div class='select-options'>
-                            <span tabindex='0' class='option'>
+                        <div className='select-options'>
+                            <span tabindex='0' className='option'>
                                 None
                             </span>
-                            <span tabindex='0' class='option'>
+                            <span tabindex='0' className='option'>
                                 Dark theme
                             </span>
-                            <span tabindex='0' class='option'>
+                            <span tabindex='0' className='option'>
                                 Light theme
                             </span>
                         </div>
@@ -51,7 +55,7 @@ export const Input = () => {
                         sandbox='allow-scripts allow-same-origin'
                     ></iframe>
                 </div>
-            </EnhancedComponentDetails>
+            </EnhancedComponentDetails> */}
         </ComponentInfo>
     );
 };

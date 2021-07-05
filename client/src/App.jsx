@@ -17,6 +17,18 @@ const App = () => {
                     <Route exact path='/docs/:subdoc' component={Docs} />
                 </Switch>
             </Router>
+            <footer
+                className='flex justify-center text-white py-8'
+                style={{ backgroundColor: '#181818' }}>
+                Built by
+                <a
+                    className='text-primary ml-1'
+                    href='http://github.com/imrhlrvndrn'
+                    target='_blank'
+                    rel='noopener noreferrer'>
+                    Rahul Ravindran
+                </a>
+            </footer>
         </div>
     );
 };

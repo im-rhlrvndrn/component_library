@@ -1,11 +1,11 @@
 import { ComponentInfo } from '../ComponentInfo';
-import { EnhancedComponentDetails } from '../ComponentInfo/ComponentDetails';
+import { EnhancedComponentDetails as ComponentDetails } from '../ComponentInfo/ComponentDetails';
 
 export const Nav = () => {
     return (
         <>
             <ComponentInfo heading='Navs'>
-                <EnhancedComponentDetails subHeading='e-commerce navigation bar'>
+                <ComponentDetails subHeading='e-commerce navigation bar'>
                     <div className='details_content_preview'>
                         <div className='nav'>
                             <h1 className='font-lg logo' style={{ marginRight: '2rem' }}>
@@ -41,7 +41,7 @@ export const Nav = () => {
                         </div>
                     </div>
                     <div className='details_content_code'></div>
-                </EnhancedComponentDetails>
+                </ComponentDetails>
             </ComponentInfo>
         </>
     );

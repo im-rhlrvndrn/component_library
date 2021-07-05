@@ -1,0 +1,33 @@
+@import '../../mixins.scss';
+
+.hero {
+    max-width: 900px;
+    @include tablet {
+        padding: 0 2rem;
+        max-width: 600px;
+    }
+    @include mobile {
+        padding: 0 1rem;
+        max-width: 100%;
+
+        span {
+            font-size: $font-s;
+        }
+
+        h1 {
+            font-size: $font-xl;
+        }
+    }
+    @include sm-mobile {
+        div {
+            flex-direction: column;
+            a {
+                margin: 0;
+
+                &:last-child {
+                    margin-top: 0.5rem;
+                }
+            }
+        }
+    }
+}
