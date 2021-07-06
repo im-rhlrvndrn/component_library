@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { useParams } from 'react-router';
-import { navigation } from '../../constants';
 import { useTitle } from '../../hooks/useTitle';
+import { navigation } from '../../constants';
 
 // styles
 import './docs.scss';

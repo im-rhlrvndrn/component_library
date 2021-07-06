@@ -5,6 +5,9 @@
     padding: 2rem 4rem;
     height: 100vh;
     overflow-y: auto;
+    @include tablet {
+        padding: 2rem;
+    }
 
     h1 {
         margin-bottom: 2rem;

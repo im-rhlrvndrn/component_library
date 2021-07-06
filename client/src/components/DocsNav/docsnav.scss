@@ -3,32 +3,54 @@
 nav {
     width: 300px;
     height: 100vh;
-    display: flex;
-    overflow-y: auto;
-    align-items: flex-end;
-    flex-direction: column;
-    padding: 3rem 3rem 3rem 0;
     border-right: 2px solid $lightest;
-    // background-color: $lightest;
+    z-index: 100;
+    @include tablet {
+        top: 0;
+        left: 0;
+        width: 100%;
+        position: absolute;
+        background-color: $lightest;
+    }
 
-    a {
-        color: $dark;
-        font-size: 1rem;
-        border-radius: 5px;
-        margin-bottom: 1rem;
+    .nav-container {
         height: max-content;
-        padding: 0.5rem 1rem;
-        text-transform: capitalize;
-        transition: 0.4s all ease-in-out;
-
-        &.active {
-            color: $light;
-            background-color: $dark;
+        display: flex;
+        overflow-y: auto;
+        align-items: flex-end;
+        flex-direction: column;
+        padding: 3rem 3rem 3rem 0;
+        @include tablet {
+            padding: 3rem;
+            align-items: flex-start;
         }
 
-        &:hover {
-            color: $light;
-            background-color: $dark;
+        a {
+            color: $dark;
+            font-size: 1rem;
+            border-radius: 5px;
+            margin-bottom: 1rem;
+            height: max-content;
+            padding: 0.5rem 1rem;
+            text-transform: capitalize;
+            transition: 0.4s all ease-in-out;
+            @include tablet {
+                padding: 0.5rem 0;
+            }
+
+            &.active,
+            &:hover {
+                color: $dark;
+                padding: 0.5rem 1rem;
+                background-color: $primary;
+            }
         }
     }
+}
+
+.nav-controller {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    z-index: 101;
 }

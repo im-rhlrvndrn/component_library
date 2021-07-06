@@ -9,7 +9,6 @@ import { GettingStarted } from '../components/GettingStarted';
 import { Input } from '../components/Input';
 import { List } from '../components/List';
 import { Modal } from '../components/Modal';
-import { Nav } from '../components/Nav';
 
 export const navigation = [
     {
@@ -61,10 +60,5 @@ export const navigation = [
         displayText: 'modals',
         url: '/docs/modal',
         component: Modal,
-    },
-    {
-        displayText: 'navs',
-        url: '/docs/nav',
-        component: Nav,
     },
 ];

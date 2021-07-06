@@ -12,11 +12,17 @@
         border: 2px solid $light;
         border-radius: 10px 10px 0 0;
         justify-content: space-between;
+        @include tablet {
+            flex-direction: column;
+        }
 
         &_sub_heading {
             margin: 0;
             font-size: var(--font-lg);
             font-weight: 600;
+            @include tablet {
+                margin-bottom: 1rem;
+            }
         }
 
         &_cta {
