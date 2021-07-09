@@ -11,15 +11,17 @@ const ComponentDetails = ({ subHeading, codeState, setCodeState, children }) => 
                 <h2 className='details_header_sub_heading'>{subHeading}</h2>
                 <div className='details_header_cta'>
                     <button
-                        className={!codeState ? 'active' : ''}
-                        onClick={() => setCodeState(false)}
-                    >
+                        className={`${
+                            !codeState ? 'active' : ''
+                        } text-s px-4 mr-4 rounded-md bg-transparent`}
+                        onClick={() => setCodeState(false)}>
                         Preview
                     </button>
                     <button
-                        className={codeState ? 'active' : ''}
-                        onClick={() => setCodeState(true)}
-                    >
+                        className={`${
+                            codeState ? 'active' : ''
+                        } text-s px-4 mr-4 rounded-md bg-transparent`}
+                        onClick={() => setCodeState(true)}>
                         Code
                     </button>
                 </div>

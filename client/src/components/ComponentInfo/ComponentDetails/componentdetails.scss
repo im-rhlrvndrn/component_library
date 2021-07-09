@@ -20,6 +20,7 @@
             margin: 0;
             font-size: var(--font-lg);
             font-weight: 600;
+            text-transform: capitalize;
             @include tablet {
                 margin-bottom: 1rem;
             }
@@ -27,12 +28,6 @@
 
         &_cta {
             button {
-                padding: 0 1rem;
-                font-size: 1rem;
-                margin-right: 1rem;
-                border-radius: $br-10;
-                background-color: transparent;
-
                 &:last-child {
                     margin: 0;
                 }

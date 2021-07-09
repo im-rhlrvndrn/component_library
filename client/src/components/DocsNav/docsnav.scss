@@ -1,10 +1,13 @@
 @import '../../mixins.scss';
 
 nav {
+    position: sticky;
+    top: 0;
     width: 300px;
     height: 100vh;
-    border-right: 2px solid $lightest;
     z-index: 100;
+    background-color: $lightest;
+    border-right: 2px solid $lightest;
     @include tablet {
         top: 0;
         left: 0;
@@ -19,31 +22,39 @@ nav {
         overflow-y: auto;
         align-items: flex-end;
         flex-direction: column;
-        padding: 3rem 3rem 3rem 0;
+        padding: 3rem;
         @include tablet {
             padding: 3rem;
             align-items: flex-start;
         }
+        @include sm-mobile {
+            padding: 1rem;
+        }
 
         a {
             color: $dark;
-            font-size: 1rem;
-            border-radius: 5px;
-            margin-bottom: 1rem;
-            height: max-content;
-            padding: 0.5rem 1rem;
-            text-transform: capitalize;
             transition: 0.4s all ease-in-out;
-            @include tablet {
-                padding: 0.5rem 0;
+
+            &.active {
+                color: $dark;
+                font-weight: 600;
+                background-color: $primary;
+
+                &:hover {
+                    background-color: $primary;
+                }
             }
 
-            &.active,
             &:hover {
                 color: $dark;
-                padding: 0.5rem 1rem;
-                background-color: $primary;
+                background-color: $light;
             }
+        }
+    }
+
+    p {
+        @include tablet {
+            text-align: center;
         }
     }
 }

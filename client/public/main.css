@@ -774,6 +774,26 @@ input {
     margin: 0;
 }
 
+.m-auto {
+    margin: auto;
+}
+
+.mt-auto {
+    margin-top: auto;
+}
+
+.mb-auto {
+    margin-bottom: auto;
+}
+
+.ml-auto {
+    margin-left: auto;
+}
+
+.mr-auto {
+    margin-right: auto;
+}
+
 .ml-n-1 {
     margin-left: -1rem;
 }
@@ -1259,6 +1279,26 @@ input {
 .my-16 {
     margin-top: 4rem;
     margin-bottom: 4rem;
+}
+
+.p-auto {
+    padding: auto;
+}
+
+.pt-auto {
+    padding-top: auto;
+}
+
+.pb-auto {
+    padding-bottom: auto;
+}
+
+.pl-auto {
+    padding-left: auto;
+}
+
+.pr-auto {
+    padding-right: auto;
 }
 
 .p-0 {

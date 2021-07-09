@@ -20,16 +20,28 @@ export const DocsNav = ({ navigation }) => {
     return (
         <Fragment>
             {isOpen && (
-                <nav>
+                <nav className='flex flex-col justify-between pb-12'>
                     <div className='nav-container'>
                         {navigation.map(({ url, displayText }) => (
                             <NavLink
+                                className='rounded-md w-full hmax text-sm p-4 capitalize'
                                 onClick={() => _windowSize.width <= 768 && setIsOpen(false)}
                                 to={url}>
                                 {displayText.split('-').join(' ')}
                             </NavLink>
                         ))}
                     </div>
+
+                    <p className='px-6 py-6 bg-dark text-white rounded-md mx-6'>
+                        Built by
+                        <a
+                            className='text-primary ml-1'
+                            href='http://github.com/imrhlrvndrn'
+                            target='_blank'
+                            rel='noopener noreferrer'>
+                            Rahul Ravindran
+                        </a>
+                    </p>
                 </nav>
             )}
             {_windowSize.width <= 768 && (
