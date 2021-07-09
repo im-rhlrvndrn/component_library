@@ -12,21 +12,22 @@
         border: 2px solid $light;
         border-radius: 10px 10px 0 0;
         justify-content: space-between;
+        @include tablet {
+            flex-direction: column;
+        }
 
         &_sub_heading {
             margin: 0;
             font-size: var(--font-lg);
             font-weight: 600;
+            text-transform: capitalize;
+            @include tablet {
+                margin-bottom: 1rem;
+            }
         }
 
         &_cta {
             button {
-                padding: 0 1rem;
-                font-size: 1rem;
-                margin-right: 1rem;
-                border-radius: $br-10;
-                background-color: transparent;
-
                 &:last-child {
                     margin: 0;
                 }
@@ -52,6 +53,7 @@
             iframe {
                 width: 100%;
                 min-height: 350px;
+                height: auto;
                 border: none;
                 transform: scale(1);
             }
