@@ -62,3 +62,24 @@ export const navigation = [
         component: Modal,
     },
 ];
+
+export const accordions = [
+    {
+        _id: '1',
+        is_active: false,
+        content: 'Content goes here',
+        title: 'Accordion 1',
+    },
+    {
+        _id: '2',
+        is_active: false,
+        content: 'Content goes here',
+        title: 'Accordion 2',
+    },
+    {
+        _id: '3',
+        is_active: false,
+        content: 'Content goes here',
+        title: 'Accordion 3',
+    },
+];

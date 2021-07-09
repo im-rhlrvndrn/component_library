@@ -1,32 +1,43 @@
 // React components
+import { useState } from 'react';
+import { accordions as accordionData } from '../../constants';
+
+// components
 import { ComponentInfo } from '../ComponentInfo';
 import { EnhancedComponentDetails as ComponentDetails } from '../ComponentInfo/ComponentDetails';
 
 export const Accordion = () => {
+    const [accordions, setAccordions] = useState(accordionData);
+    const updateAccordion = (accordionId) =>
+        setAccordions((prevState) =>
+            prevState.map((accordion) =>
+                accordion._id === accordionId
+                    ? accordion.is_active
+                        ? { ...accordion, is_active: false }
+                        : { ...accordion, is_active: true }
+                    : { ...accordion, is_active: false }
+            )
+        );
+
     return (
         <ComponentInfo heading='Accordion'>
             <ComponentDetails subHeading='Filter Accordion'>
                 <div className='details_content_preview'>
-                    <div className='accordion bg-black p-6 text-white'>
-                        <div className='accordion-heading'>
-                            Accordion Heading <span>+</span>
-                        </div>
-                    </div>
-                    <div className='accordion bg-black p-6 text-white'>
-                        <div className='accordion-heading'>
-                            Accordion Heading <span>-</span>
-                        </div>
-                        <div className='accordion-content h-max opac-1 py-4 overflow-y-hidden duration-400'>
-                            <div className='flex items-center'>
-                                <input className='m-0 mr-4' type='checkbox' id='filter1' />
-                                <label htmlFor='filter1'>Filter 1</label>
+                    {accordions.map((accordion) => (
+                        <div key={accordion._id} className='accordion bg-black p-6 text-white'>
+                            <div
+                                className='accordion-heading'
+                                onClick={() => updateAccordion(accordion._id)}>
+                                {accordion.title}
+                                <span>+</span>
                             </div>
-                            <div className='flex items-center'>
-                                <input className='m-0 mr-4' type='checkbox' id='filter2' />
-                                <label htmlFor='filter2'>Filter 2</label>
-                            </div>
+                            {accordion.is_active && (
+                                <div className='accordion-content h-max opac-1 py-4 overflow-y-hidden duration-400'>
+                                    {accordion.content}...
+                                </div>
+                            )}
                         </div>
-                    </div>
+                    ))}
                 </div>
                 <div className='details_content_code'>
                     <iframe

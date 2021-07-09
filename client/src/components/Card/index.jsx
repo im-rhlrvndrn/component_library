@@ -6,36 +6,41 @@ export const Card = () => {
         <ComponentInfo heading='Cards'>
             <ComponentDetails subHeading='event card'>
                 <div className='details_content_preview'>
-                    <div class='p-8 rounded-md flex bg-dark br-10 wmax-600'>
+                    <div className='p-8 rounded-md flex bg-dark br-10 wmax-600'>
                         <img
-                            class='rounded-full mr-4 icon-60'
+                            alt='event organizer'
+                            className='rounded-full mr-4 icon-60'
                             src='https://avatars.githubusercontent.com/u/43089715?v=4'
                         />
                         <div>
-                            <div class='mb-4 text-lg'>Corporate Seminar</div>
-                            <div class='mb-4 text-s'>
+                            <div className='mb-4 text-lg'>Corporate Seminar</div>
+                            <div className='mb-4 text-s'>
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea illum
                                 possimus dolore animi veritatis necessitatibus repellendus
                                 perferendis? Facilis iste minima assumenda nam voluptates natus
                                 deserunt vitae eos, beatae consequatur modi!
                             </div>
-                            <div class='flex justify-between items-center'>
-                                <div class='opac-6 text-xs'>10 attachments</div>
-                                <div class='flex'>
+                            <div className='flex justify-between items-center'>
+                                <div className='opac-6 text-xs'>10 attachments</div>
+                                <div className='flex'>
                                     <img
-                                        class='rounded-full border-dark-2 ml-n-2'
+                                        alt='Participant'
+                                        className='rounded-full border-dark-2 ml-n-2'
                                         src='https://avatars.githubusercontent.com/u/43089715?v=4'
                                     />
                                     <img
-                                        class='rounded-full border-dark-2 ml-n-2'
+                                        alt='Participant'
+                                        className='rounded-full border-dark-2 ml-n-2'
                                         src='https://avatars.githubusercontent.com/u/43089715?v=4'
                                     />
                                     <img
-                                        class='rounded-full border-dark-2 ml-n-2'
+                                        alt='Participant'
+                                        className='rounded-full border-dark-2 ml-n-2'
                                         src='https://avatars.githubusercontent.com/u/43089715?v=4'
                                     />
                                     <img
-                                        class='rounded-full border-dark-2 ml-n-2'
+                                        alt='Participant'
+                                        className='rounded-full border-dark-2 ml-n-2'
                                         src='https://avatars.githubusercontent.com/u/43089715?v=4'
                                     />
                                 </div>
@@ -53,18 +58,24 @@ export const Card = () => {
 
             <ComponentDetails subHeading='text only card'>
                 <div className='details_content_preview'>
-                    <div class='p-8 bg-dark rounded-md wmax-600'>
-                        <div class='mb-4 text-lg'>Uber Screen Slider</div>
-                        <div class='mb-4 text-s'>
+                    <div className='p-8 bg-dark rounded-md wmax-600'>
+                        <div className='mb-4 text-lg'>Uber Screen Slider</div>
+                        <div className='mb-4 text-s'>
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea illum
                             possimus dolore animi veritatis necessitatibus repellendus perferendis?
                             Facilis iste minima assumenda nam voluptates natus deserunt vitae eos,
                             beatae consequatur modi!
                         </div>
-                        <div class='flex flex-align-center'>
-                            <div class='bg-light-dark rounded-sm tag mr-4 text-xs'>UX design</div>
-                            <div class='bg-light-dark rounded-sm tag mr-4 text-xs'>UX design</div>
-                            <div class='bg-light-dark rounded-sm tag mr-4 text-xs'>UX design</div>
+                        <div className='flex flex-align-center'>
+                            <div className='bg-light-dark rounded-sm tag mr-4 text-xs'>
+                                UX design
+                            </div>
+                            <div className='bg-light-dark rounded-sm tag mr-4 text-xs'>
+                                UX design
+                            </div>
+                            <div className='bg-light-dark rounded-sm tag mr-4 text-xs'>
+                                UX design
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -78,18 +89,18 @@ export const Card = () => {
 
             <ComponentDetails subHeading='text overlay card'>
                 <div className='details_content_preview'>
-                    <div class='card'>
+                    <div className='card'>
                         <img
-                            class='stretch'
+                            className='stretch'
                             src='https://images.pexels.com/photos/5473957/pexels-photo-5473957.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'
                             alt='girl with code reflection on face'
                         />
-                        <div class='overlay flex flex-justify-sb'>
-                            <div class='info mr-2'>
-                                <div class='font-semibold'>Learn ReactJS</div>
-                                <div class='text-xs opac-6'>A supporting sub heading</div>
+                        <div className='overlay flex flex-justify-sb'>
+                            <div className='info mr-2'>
+                                <div className='font-semibold'>Learn ReactJS</div>
+                                <div className='text-xs opac-6'>A supporting sub heading</div>
                             </div>
-                            <span class='bg-dark text-align-center font-lg rounded-full icon-50'>
+                            <span className='bg-dark text-align-center font-lg rounded-full icon-50'>
                                 =
                             </span>
                         </div>
